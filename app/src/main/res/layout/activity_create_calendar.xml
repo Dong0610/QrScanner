@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_12sdp">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_back_setting" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bv_600"
+            android:includeFontPadding="false"
+            android:text="@string/create_qr"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/icon_create_7" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bv_400"
+                    android:text="@string/calendar"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical"
+                app:bgColorDark="@color/transfer"
+                app:bgColorLight="@color/transfer"
+                app:cornerRadius="@dimen/_12sdp">
+
+                <EditText
+                    android:id="@+id/etEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text_rounded"
+                    android:fontFamily="@font/bv_400"
+                    android:hint="@string/event"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/txtErrorEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/bv_400"
+                    android:text=""
+                    android:textColor="#F44336"
+                    android:textSize="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <EditText
+                            android:id="@+id/etStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/bg_edit_text_rounded"
+                            android:fontFamily="@font/bv_400"
+                            android:hint="@string/start_date"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:maxLength="500"
+                            android:padding="@dimen/_12sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/txtErrorStart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/bv_400"
+                            android:text=""
+                            android:textColor="#F44336"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etEndate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/bg_edit_text_rounded"
+                            android:fontFamily="@font/bv_400"
+                            android:hint="@string/end_date"
+                            android:includeFontPadding="false"
+                            android:inputType="textCapSentences"
+                            android:maxLength="100"
+                            android:padding="@dimen/_12sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/txtErrorEnd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/bv_400"
+                            android:text=""
+                            android:textColor="#F44336"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_edit_text_rounded"
+                    android:fontFamily="@font/bv_400"
+                    android:hint="@string/location"
+                    android:includeFontPadding="false"
+                    android:maxLength="100"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/txtErrorLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/bv_400"
+                    android:text=""
+                    android:textColor="#F44336"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <com.dong.baselib.widget.layout.UiLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="vertical"
+                    app:bgColorDark="@color/white"
+                    app:bgColorLight="@color/white"
+                    app:cornerRadius="@dimen/_12sdp">
+
+                    <EditText
+                        android:id="@+id/etNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transfer"
+                        android:fontFamily="@font/bv_400"
+                        android:gravity="top"
+                        android:hint="@string/message"
+                        android:includeFontPadding="false"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_100sdp"
+                        android:padding="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/tvCharCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:fontFamily="@font/bv_400"
+                        android:includeFontPadding="false"
+                        android:text="0/500"
+                        android:textColor="#66000000" />
+                </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+            <TextView
+                android:id="@+id/txtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/bv_400"
+                android:textColor="#F44336" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_button_disabled"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_11sdp"
+                android:text="@string/create"
+                android:textAllCaps="false"
+                android:textColor="@color/Gray_Cloud"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

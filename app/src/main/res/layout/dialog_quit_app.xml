@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_12sdp"
+    android:background="@drawable/bg_dialog_view"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bv_600"
+        android:text="@string/quit"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/bv_400"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/are_you_sure_want_to_quit_app"
+        android:textColor="#464651"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.dong.baselib.widget.view.UiTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+
+            android:ellipsize="end"
+            android:fontFamily="@font/bv_500"
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_9sdp"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:bgGradientCenter="@color/gradientC"
+            app:bgGradientEnd="@color/gradientE"
+            app:bgGradientStart="@color/gradientS"
+            app:cornerRadius="@dimen/_24sdp" />
+
+        <com.dong.baselib.widget.view.UiTextView
+            android:id="@+id/tvStay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bv_500"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_9sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/Gray_Goose"
+            android:textSize="@dimen/_14ssp"
+            app:bgGdOrientation="bottom_top"
+            app:cornerRadius="@dimen/_24sdp"
+            app:stColorDark="@color/color_e0e0e0"
+            app:stColorLight="@color/color_e0e0e0"
+            app:strokeWidth="1.8dp" />
+
+
+    </LinearLayout>
+</LinearLayout>

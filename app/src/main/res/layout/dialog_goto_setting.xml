@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_view"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/bv_500"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="@string/permission"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/bv_400"
+        android:includeFontPadding="false"
+        android:text="@string/title_dialog_per"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/bv_400"
+        android:includeFontPadding="false"
+        android:text="@string/content_dialog_per_noti"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.dong.baselib.widget.view.UiTextView
+            android:id="@+id/tvStay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/bv_500"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_9sdp"
+            android:text="@string/stay"
+            android:textColor="@color/Gray_Goose"
+            android:textSize="@dimen/_14ssp"
+            app:bgGdOrientation="bottom_top"
+            app:cornerRadius="@dimen/_24sdp"
+            app:stColorDark="@color/color_e0e0e0"
+            app:stColorLight="@color/color_e0e0e0"
+            app:strokeWidth="1.8dp" />
+
+        <com.dong.baselib.widget.view.UiTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/bv_500"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_9sdp"
+            android:text="@string/agree"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:bgGradientCenter="@color/gradientC"
+            app:bgGradientEnd="@color/gradientE"
+            app:bgGradientStart="@color/gradientS"
+            app:cornerRadius="@dimen/_24sdp" />
+    </LinearLayout>
+</LinearLayout>

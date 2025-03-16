@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.main.CreateFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_40sdp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/bv_600"
+                android:includeFontPadding="false"
+                android:text="Create Qr"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/icSettings"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_setting_app" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/text"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateUrl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_10" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/url"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_4" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/message"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_3" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/email"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateWifi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/wifi"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_5" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/location"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreatePhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_6" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/phone"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateCalendar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_7" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/calendar"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateContact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/icon_create_2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/contact"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                    <com.dong.baselib.widget.layout.UiLinearLayout
+                        android:id="@+id/lnCreateBarcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_12sdp"
+                        app:bgColorDark="@color/white"
+                        app:bgColorLight="@color/white"
+                        app:cornerRadius="@dimen/_12sdp"
+                        app:stColorDark="@color/color_e0e0e0"
+                        app:stColorLight="@color/color_e0e0e0"
+                        app:strokeWidth=".5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:src="@drawable/ic_create_11" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bv_500"
+                            android:includeFontPadding="false"
+                            android:text="@string/barcode"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

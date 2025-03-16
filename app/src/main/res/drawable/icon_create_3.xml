@@ -1,0 +1,61 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="48"
+    android:viewportHeight="48"
+    android:width="48dp"
+    android:height="48dp">
+    <path
+        android:pathData="M16 0H32A16 16 0 0 1 48 16V32A16 16 0 0 1 32 48H16A16 16 0 0 1 0 32V16A16 16 0 0 1 16 0Z">
+        <aapt:attr
+            name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:endX="24"
+                android:endY="48"
+                android:tileMode="clamp">
+                <item
+                    android:color="#66CED6FF"
+                    android:offset="0" />
+                <item
+                    android:color="#66778EFF"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M16 0H32A16 16 0 0 1 48 16V32A16 16 0 0 1 32 48H16A16 16 0 0 1 0 32V16A16 16 0 0 1 16 0Z">
+        <aapt:attr
+            name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="24"
+                android:centerY="48"
+                android:gradientRadius="17.5"
+                android:tileMode="clamp">
+                <item
+                    android:color="#330F37FF"
+                    android:offset="0" />
+                <item
+                    android:color="#00042EFF"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M16 0.5H32A15.5 15.5 0 0 1 47.5 16V32A15.5 15.5 0 0 1 32 47.5H16A15.5 15.5 0 0 1 0.5 32V16A15.5 15.5 0 0 1 16 0.5Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M29.8335 33.9166H18.1668C14.6668 33.9166 12.3335 32.1666 12.3335 28.0833V19.9166C12.3335 15.8333 14.6668 14.0833 18.1668 14.0833H29.8335C33.3335 14.0833 35.6668 15.8333 35.6668 19.9166V28.0833C35.6668 32.1666 33.3335 33.9166 29.8335 33.9166Z"
+        android:strokeColor="#001AA4"
+        android:strokeWidth="1.75"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M29.8332 20.5L26.1815 23.4167C24.9798 24.3733 23.0082 24.3733 21.8065 23.4167L18.1665 20.5"
+        android:strokeColor="#001AA4"
+        android:strokeWidth="1.75"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>
