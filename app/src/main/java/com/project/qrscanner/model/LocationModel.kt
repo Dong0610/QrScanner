@@ -16,7 +16,7 @@ class LocationModel(
     var query: String = ""
 ) : Serializable {
     override fun toString(): String {
-        return "GEO: $longitude,$latitude?q=$query"
+        return "GEO:$longitude,$latitude?q=$query"
     }
     companion object {
         fun fromString(geoString: String): LocationModel? {

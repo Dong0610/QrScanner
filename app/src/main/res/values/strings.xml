@@ -216,7 +216,10 @@
     <string name="error_opening_map">Can\'t open map now</string>
     <string name="error_opening_url">Error opening url</string>
     <string name="value">Value</string>
-    <string name="require_value_enter">Please enter text to create QR code.</string>
+    <string name="require_value_enter">Please enter text value.</string>
     <string name="choose">Choose</string>
+    <string name="require_pass_8_character">Require password 8 character</string>
+    <string name="phone_number_should_not_exceed_29_characters">Phone number should not exceed 30 characters</string>
+    <string name="end_date_after_start_date">End date must be after the start date</string>
 
 </resources>

@@ -57,7 +57,14 @@ fun TextView.listenError(error: MutableLiveData<String>, lifecycleOwner: Lifecyc
 
 fun MutableLiveData<String>.textViewError(textView: TextView, lifecycleOwner: LifecycleOwner) {
     observe(lifecycleOwner) { errorMessage ->
-        textView.text = errorMessage?.reconvertUnicodeToEmoji() ?: ""
-        textView.visibility = if (errorMessage.isNullOrEmpty()) View.INVISIBLE else View.VISIBLE
+        if(errorMessage.equals("_")){
+            textView.text = errorMessage?.reconvertUnicodeToEmoji() ?: ""
+            textView.visibility = View.INVISIBLE
+        }
+        else{
+            textView.text = errorMessage?.reconvertUnicodeToEmoji() ?: ""
+            textView.visibility = if (errorMessage.isNullOrEmpty()) View.INVISIBLE else View.VISIBLE
+        }
+
     }
 }

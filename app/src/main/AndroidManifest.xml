@@ -39,10 +39,22 @@
             android:name=".ui.create.CreateUrlActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.create.CreateEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create.CreateLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create.CreateCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.create.CreatePhoneActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.create.CreateTextActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.create.CreateQrActivity"
+            android:name=".ui.create.CreateWifiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.result.ResultScanActivity"

@@ -50,7 +50,7 @@ fun detectQrType(content: String): QrType {
                 } -> QrType.URL
 
         // Email
-        content.startsWith("mailto:") ||
+        content.startsWith("mailto:") || content.startsWith("MAILTO:")||
                 content.matches(Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")) -> QrType.EMAIL
 
         // Phone
@@ -60,7 +60,7 @@ fun detectQrType(content: String): QrType {
         content.startsWith("sms:") ||
                 content.startsWith("smsto:") -> QrType.SMS
 
-        content.startsWith("WIFI:") -> QrType.WIFI
+        content.startsWith("WIFI:")|| content.startsWith("wifi:") -> QrType.WIFI
 
         content.startsWith("geo:") ||
                 content.matches(Regex("^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$")) -> QrType.LOCATION
@@ -78,13 +78,16 @@ fun detectQrType(content: String): QrType {
     }
 }
 
-fun AppCompatButton.setState(state:Boolean){
-    if(state){
+
+fun AppCompatButton.setState(b: Boolean) {
+    if (b) {
         setBackgroundResource(R.drawable.bg_button_active)
         setTextColor(fromColor("ffffff"))
+        isActivated = true
     }else{
         setBackgroundResource(R.drawable.bg_button_disabled)
         setTextColor(fromColor("#B6B6B4"))
+        isActivated = false
     }
 }
 

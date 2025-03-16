@@ -1,21 +1,86 @@
 package com.project.qrscanner.ui.create
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import com.dong.baselib.lifecycle.LauncherEffect
+import com.dong.baselib.lifecycle.get
+import com.dong.baselib.lifecycle.mutableLiveData
+import com.dong.baselib.lifecycle.set
+import com.dong.baselib.widget.afterTextChanged
+import com.dong.baselib.widget.click
 import com.project.qrscanner.R
+import com.project.qrscanner.app.viewModel
+import com.project.qrscanner.base.BaseActivity
+import com.project.qrscanner.builder.setState
+import com.project.qrscanner.builder.textViewError
+import com.project.qrscanner.databinding.ActivityCreateSmsBinding
+import com.project.qrscanner.model.MessageModel
+import com.project.qrscanner.model.QrType
+import com.project.qrscanner.model.toSmsString
+import com.project.qrscanner.ui.result.ResultCreateActivity
 
-class CreateMessageActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_create_email)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+class CreateMessageActivity :
+    BaseActivity<ActivityCreateSmsBinding>(ActivityCreateSmsBinding::inflate) {
+    override fun backPressed() {
+        finish()
+    }
+
+    override fun initialize() {
+        phoneError.textViewError(binding.txtErrorPhone, this@CreateMessageActivity)
+        smsError.textViewError(binding.txtError, this)
+    }
+
+
+    private val smsError = MutableLiveData<String>(" ")
+    private val phoneError = mutableLiveData(" ")
+    var isNextSc=false
+    override fun onResume() {
+        super.onResume()
+        isNextSc=false
+    }
+
+    override fun ActivityCreateSmsBinding.onClick() {
+        btnBack.click {
+            backPressed()
+        }
+        btnCreate.click {
+            hideKeyboard()
+            if (btnCreate.isActivated && !isNextSc) {
+                isNextSc= true
+                val value =
+                    MessageModel(edtPhone.text.toString(), etBody.text.toString()).toSmsString()
+                viewModel.createQrWithValue(value, QrType.SMS) {
+                    launchActivity<ResultCreateActivity>()
+                }
+            }
+        }
+    }
+
+    override fun ActivityCreateSmsBinding.setData() {
+        etBody.afterTextChanged {
+            if (it.trim().isEmpty()) {
+                smsError.set(getString(R.string.require_value_enter))
+            }else
+            if (it.length > 500) {
+                smsError.set(getString(R.string.maximum) + " 500 " + getString(R.string.character))
+            } else {
+                smsError.set("_")
+            }
+        }
+        edtPhone.afterTextChanged {
+            if (it.trim().isEmpty()) {
+                phoneError.set(getString(R.string.require_value_enter))
+            } else {
+                phoneError.set("_")
+            }
+        }
+
+        LauncherEffect(smsError, phoneError) {
+            val isPhoneErrorEmpty = phoneError.get()=="_"
+            val isSmsErrorEmpty = smsError.get()=="_"
+
+            Log.e("TestValue", "Data is: $isSmsErrorEmpty $isPhoneErrorEmpty data: ")
+            btnCreate.setState(isPhoneErrorEmpty && isSmsErrorEmpty)
         }
     }
 }
