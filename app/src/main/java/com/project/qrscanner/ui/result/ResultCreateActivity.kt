@@ -45,7 +45,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
-
 class ResultCreateActivity :
     BaseActivity<ActivityResultCreateBinding>(ActivityResultCreateBinding::inflate) {
     override fun backPressed() {
