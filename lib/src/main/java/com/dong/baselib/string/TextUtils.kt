@@ -55,6 +55,12 @@ fun String.format(): String {
     return this.replace("\n", "").trim()
 }
 
+fun formatTimestamp(timestamp: Long): String {
+    val date = Date(timestamp)
+    val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
+    return sdf.format(date)
+}
+
 fun String.checkValue(): Boolean {
     return this.replace(" ", "").replace("\n", "").isNotEmpty()
 }

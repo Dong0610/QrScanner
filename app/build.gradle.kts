@@ -6,18 +6,20 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
     id("com.google.devtools.ksp")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics)
 }
 
 android {
-    namespace = "com.project.qrscanner"
-    compileSdk = 35
+    namespace = "net.blwsmartware.qrcodescanner"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.project.qrscanner"
+        applicationId = "net.blwsmartware.qrcodescanner"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         val formattedDate = SimpleDateFormat("MMM.dd.yyyy").format(Date())
         base.archivesName = "FileRecovery-v$versionName($versionCode)_${formattedDate}"
@@ -25,12 +27,13 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = "qrscan"
-            keyPassword = "100129"
-            storeFile = rootProject.file("keystore/keystore.jks")
-            storePassword = "100129"
+            keyAlias = "BlackWolves"
+            keyPassword = "blackwolves1"
+            storeFile = rootProject.file("keystore/blackwolves.jks")
+            storePassword = "blackwolves1"
         }
     }
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -50,18 +53,18 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+           signingConfig = signingConfigs.getByName("release")
         }
     }
     flavorDimensions.add("version")
     productFlavors {
         create("dev") {
-            applicationId = "com.project.qrscanner"
+            applicationId = "net.blwsmartware.qrcodescanner"
             buildConfigField("boolean", "build_debug", "true")
         }
 
         create("product") {
-            applicationId = "com.project.qrscanner"
+            applicationId = "net.blwsmartware.qrcodescanner"
             buildConfigField("boolean", "build_debug", "false")
         }
     }
@@ -145,5 +148,16 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
 
+
+
+    implementation("com.google.firebase:firebase-bom:30.1.0")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.firebase:firebase-crashlytics:19.3.0")
+    implementation("com.android.billingclient:billing:7.1.1")
+    implementation("com.google.firebase:firebase-analytics:22.1.2")
+    implementation("com.google.firebase:firebase-messaging:24.1.0")
+
+    implementation("com.google.firebase:firebase-config:21.2.0")
 
 }

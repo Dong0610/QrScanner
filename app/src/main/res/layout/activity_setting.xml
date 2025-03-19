@@ -34,7 +34,7 @@
             android:text="@string/settings"
             android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textSize="@dimen/_18sdp"
+            android:textSize="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/viewEnd"
             app:layout_constraintStart_toEndOf="@+id/ivBackPress"
@@ -66,14 +66,16 @@
 
         <com.dong.baselib.widget.layout.UiLinearLayout
             android:layout_width="match_parent"
-            app:strokeWidth="@dimen/_1sdp"
+            app:strokeWidth="0.5dp"
             android:id="@+id/llLanguage"
-            app:stColorDark="#9CA3AF"
+            app:stColorDark="#C8C8C8"
+            app:bgColorDark="@color/white"
+            app:bgColorLight="@color/white"
             android:paddingHorizontal="@dimen/_8sdp"
             android:paddingVertical="@dimen/_6sdp"
-            app:cornerRadius="@dimen/_24sdp"
+            app:cornerRadius="@dimen/_8sdp"
             android:gravity="center_vertical"
-            app:stColorLight="#9CA3AF"
+            app:stColorLight="#C8C8C8"
             android:layout_height="wrap_content">
             <ImageView
                 android:paddingHorizontal="@dimen/_3sdp"
@@ -91,15 +93,90 @@
         </com.dong.baselib.widget.layout.UiLinearLayout>
         <com.dong.baselib.widget.layout.UiLinearLayout
             android:layout_width="match_parent"
-            app:strokeWidth="@dimen/_1sdp"
-            android:id="@+id/llShare"
+            app:strokeWidth="0.5dp"
             android:layout_marginTop="@dimen/_12sdp"
-            app:stColorDark="#9CA3AF"
+            app:stColorDark="#C8C8C8"
+            app:bgColorDark="@color/white"
+            app:bgColorLight="@color/white"
             android:paddingHorizontal="@dimen/_8sdp"
             android:paddingVertical="@dimen/_6sdp"
-            app:cornerRadius="@dimen/_24sdp"
+            app:cornerRadius="@dimen/_8sdp"
             android:gravity="center_vertical"
-            app:stColorLight="#9CA3AF"
+            app:stColorLight="#C8C8C8"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:layout_width="@dimen/_32sdp"
+                android:src="@drawable/ic_vibrate_scan"
+                android:layout_height="@dimen/_32sdp"/>
+            <TextView
+                android:fontFamily="@font/bv_500"
+                android:includeFontPadding="false"
+                android:layout_marginStart="@dimen/_4ssp"
+                android:textSize="@dimen/_12ssp"
+                android:layout_weight="1"
+                android:text="@string/vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.dong.baselib.widget.view.GradientSwitch
+                android:id="@+id/swVibrate"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.dong.baselib.widget.layout.UiLinearLayout>
+        <com.dong.baselib.widget.layout.UiLinearLayout
+            android:layout_width="match_parent"
+            app:strokeWidth="0.5dp"
+            app:stColorDark="#C8C8C8"
+            app:bgColorDark="@color/white"
+            app:bgColorLight="@color/white"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            app:cornerRadius="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            app:stColorLight="#C8C8C8"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:layout_width="@dimen/_32sdp"
+                android:src="@drawable/ic_volume_scan"
+                android:layout_height="@dimen/_32sdp"/>
+            <TextView
+                android:fontFamily="@font/bv_500"
+                android:includeFontPadding="false"
+                android:layout_marginStart="@dimen/_4ssp"
+                android:textSize="@dimen/_12ssp"
+                android:text="@string/sound"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.dong.baselib.widget.view.GradientSwitch
+                android:id="@+id/swSound"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.dong.baselib.widget.layout.UiLinearLayout>
+        <com.dong.baselib.widget.layout.UiLinearLayout
+            android:layout_width="match_parent"
+            app:strokeWidth="0.5dp"
+            android:id="@+id/llShare"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:stColorDark="#C8C8C8"
+            app:bgColorDark="@color/white"
+            app:bgColorLight="@color/white"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            app:cornerRadius="@dimen/_8sdp"
+            android:gravity="center_vertical"
+            app:stColorLight="#C8C8C8"
             android:layout_height="wrap_content">
             <ImageView
                 android:paddingHorizontal="@dimen/_3sdp"
@@ -115,43 +192,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </com.dong.baselib.widget.layout.UiLinearLayout>
+
         <com.dong.baselib.widget.layout.UiLinearLayout
             android:layout_width="match_parent"
-            app:strokeWidth="@dimen/_1sdp"
-            android:id="@+id/llRate"
-            android:layout_marginTop="@dimen/_12sdp"
-            app:stColorDark="#9CA3AF"
-            android:paddingHorizontal="@dimen/_8sdp"
-            android:paddingVertical="@dimen/_6sdp"
-            app:cornerRadius="@dimen/_24sdp"
-            android:gravity="center_vertical"
-            app:stColorLight="#9CA3AF"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:paddingHorizontal="@dimen/_3sdp"
-                android:layout_width="@dimen/_32sdp"
-                android:src="@drawable/ic_setting_03"
-                android:layout_height="@dimen/_32sdp"/>
-            <TextView
-                android:fontFamily="@font/bv_500"
-                android:includeFontPadding="false"
-                android:layout_marginStart="@dimen/_4ssp"
-                android:textSize="@dimen/_12ssp"
-                android:text="@string/rate_us"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </com.dong.baselib.widget.layout.UiLinearLayout>
-        <com.dong.baselib.widget.layout.UiLinearLayout
-            android:layout_width="match_parent"
-            app:strokeWidth="@dimen/_1sdp"
+            app:strokeWidth="0.5dp"
             android:id="@+id/llAbout"
             android:layout_marginTop="@dimen/_12sdp"
-            app:stColorDark="#9CA3AF"
+            app:stColorDark="#C8C8C8"
+            app:bgColorDark="@color/white"
+            app:bgColorLight="@color/white"
             android:paddingHorizontal="@dimen/_8sdp"
             android:paddingVertical="@dimen/_6sdp"
-            app:cornerRadius="@dimen/_24sdp"
+            app:cornerRadius="@dimen/_8sdp"
             android:gravity="center_vertical"
-            app:stColorLight="#9CA3AF"
+            app:stColorLight="#C8C8C8"
             android:layout_height="wrap_content">
             <ImageView
                 android:paddingHorizontal="@dimen/_3sdp"

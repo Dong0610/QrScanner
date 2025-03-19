@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F8F8F8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.main.HistoryFragment">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/bv_600"
+            android:includeFontPadding="false"
+            android:text="@string/history"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <ImageView
+            android:id="@+id/icDelete"
+            android:visibility="invisible"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_width="@dimen/_22sdp"
+            app:tint="@color/color_e0e0e0"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_view_trash" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/listItem"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_history_view"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_40sdp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

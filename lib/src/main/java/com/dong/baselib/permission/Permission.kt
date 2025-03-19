@@ -40,6 +40,7 @@ class Permission {
             Manifest.permission.READ_CONTACTS,
             Manifest.permission.WRITE_CONTACTS
         )
+    val contactReadRequest = Manifest.permission.READ_CONTACTS
     val cameraRequest = Manifest.permission.CAMERA
     val locationRequest = Manifest.permission.ACCESS_FINE_LOCATION
 

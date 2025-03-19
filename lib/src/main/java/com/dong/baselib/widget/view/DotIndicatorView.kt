@@ -29,7 +29,7 @@ class DotIndicatorView @JvmOverloads constructor(
     private val dotSpacing = 8.dpToPx()
 
     private val activeDotColor = Color.parseColor("#2473BD")
-    private val inactiveDotColor = Color.parseColor("#737373")
+    private val inactiveDotColor = Color.parseColor("#BFBFBF")
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 

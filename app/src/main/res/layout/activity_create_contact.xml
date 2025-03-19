@@ -67,13 +67,14 @@
                     android:textSize="@dimen/_12sdp" />
 
                 <TextView
+                    android:id="@+id/txtChoose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_button_active"
                     android:fontFamily="@font/bv_500"
                     android:includeFontPadding="false"
                     android:paddingHorizontal="@dimen/_12sdp"
-                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingVertical="@dimen/_4sdp"
                     android:text="@string/choose"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp" />
@@ -183,6 +184,7 @@
                     android:textSize="@dimen/_11sdp" />
 
                 <TextView
+
                     android:id="@+id/txtErrorPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -235,7 +237,7 @@
                         android:background="@color/transfer"
                         android:fontFamily="@font/bv_400"
                         android:gravity="top"
-                        android:hint="@string/message"
+                        android:hint="@string/note"
                         android:includeFontPadding="false"
                         android:inputType="textMultiLine"
                         android:minHeight="@dimen/_100sdp"
@@ -262,8 +264,9 @@
             </com.dong.baselib.widget.layout.UiLinearLayout>
 
             <TextView
-                android:id="@+id/txtError"
+                android:id="@+id/txtErrorDescription"
                 android:layout_width="match_parent"
+                android:textSize="@dimen/_10sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_marginTop="@dimen/_6sdp"

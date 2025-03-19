@@ -62,7 +62,6 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -193,7 +192,7 @@
         android:paddingHorizontal="@dimen/_8sdp"
         android:paddingVertical="@dimen/_8sdp"
         android:text="@string/continues"
-        android:textColor="#2473BD"
+        android:textColor="@color/gradientS"
         android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
