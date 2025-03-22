@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.project.qrscanner.ui.main.CreateFragment"
+        android:name="net.blwsmartware.qrcodescanner.ui.main.CreateFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_create" />
     <fragment
         android:id="@+id/scanFragment"
-        android:name="com.project.qrscanner.ui.main.ScanFragment"
+        android:name="net.blwsmartware.qrcodescanner.ui.main.ScanFragment"
         android:label="fragment_scan"
         tools:layout="@layout/fragment_scan" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.project.qrscanner.ui.main.HistoryFragment"
+        android:name="net.blwsmartware.qrcodescanner.ui.main.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
 </navigation>

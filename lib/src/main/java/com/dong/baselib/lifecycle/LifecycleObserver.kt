@@ -12,17 +12,66 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
-fun <T> mutableLiveData(value: T): MutableLiveData<T> = MutableLiveData(value)
+fun <T> mutableLiveData(value: T): MutableLiveData<T> = MutableLiveData<T>().apply { setValue(value) }
+fun <T> MutableLiveData<T>.get(): T? = this.value
+fun <T> MutableLiveData<T>.set(value: T) {
+    this.value=value
+}
 
 fun <T> LiveData<T>.asFlow(): Flow<T> = MutableLiveData<T>().apply {
     this.value = this@asFlow.value
 }.asFlow()
+
+class LiveDataWrapper<T>(private val liveData: MutableLiveData<T>) {
+
+    fun set(value: T): LiveDataWrapper<T> {
+        liveData.value = value
+        return this
+    }
+
+    fun get(): T? {
+        return liveData.value
+    }
+
+    fun getLiveData(): LiveData<T> {
+        return liveData
+    }
+}
+
+fun <T> AppCompatActivity.LauncherEffect(
+    vararg keys: LiveDataWrapper<T>,
+    block: suspend CoroutineScope.(T) -> Unit
+) {
+    keys.forEach { wrapper ->
+        val observer = Observer<T> { newValue ->
+            lifecycleScope.launch {
+                block(newValue)
+            }
+        }
+
+        val liveData = wrapper.getLiveData()
+        liveData.observe(this, observer)
+
+        lifecycle.addObserver(object : DefaultLifecycleObserver {
+            override fun onDestroy(owner: LifecycleOwner) {
+                liveData.removeObserver(observer)
+                super.onDestroy(owner)
+            }
+        })
+    }
+}
+
+
+
+
 
 fun <T> MutableLiveData<T>.change(value: (T) -> Unit) {
     this.observeForever {
         value(it)
     }
 }
+
+
 
 fun <T> MutableLiveData<T>.post(value: T) {
     this.postValue(value)
@@ -89,8 +138,10 @@ fun <T> AppCompatActivity.DisposeEffect(
     lifecycle.addObserver(lifecycleObserver)
 }
 
+
+
 fun <T> AppCompatActivity.LauncherEffect(
-    key: MutableLiveData<T>,
+    vararg keys: MutableLiveData<T>,
     block: suspend CoroutineScope.(T) -> Unit
 ) {
     val observer = Observer<T> { newValue ->
@@ -98,11 +149,15 @@ fun <T> AppCompatActivity.LauncherEffect(
             block(newValue)
         }
     }
-    key.observe(this, observer)
+    keys.forEach { key ->
+        key.observe(this, observer)
+    }
 
     lifecycle.addObserver(object : DefaultLifecycleObserver {
         override fun onDestroy(owner: LifecycleOwner) {
-            key.removeObserver(observer)
+            keys.forEach { key ->
+                key.removeObserver(observer)
+            }
             super.onDestroy(owner)
         }
     })

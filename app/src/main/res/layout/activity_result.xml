@@ -83,6 +83,7 @@
                 app:cornerRadius="@dimen/_12sdp"
                 android:id="@+id/lnResult"
                 app:bgColorLight="@color/white"
+                android:orientation="vertical"
                 android:layout_marginHorizontal="@dimen/_32sdp"
                 app:bgColorDark="@color/white"
 

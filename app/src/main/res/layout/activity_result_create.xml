@@ -82,6 +82,7 @@
                 android:layout_marginTop="@dimen/_18sdp"
                 app:cornerRadius="@dimen/_12sdp"
                 android:id="@+id/lnResult"
+                android:orientation="vertical"
                 app:bgColorLight="@color/white"
                 android:layout_marginHorizontal="@dimen/_32sdp"
                 app:bgColorDark="@color/white"

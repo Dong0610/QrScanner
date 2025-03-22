@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dong.baselib.widget.layout.UiLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_6sdp"
+    app:bgColorDark="@color/white"
+    app:bgColorLight="@color/white"
+    app:cornerRadius="@dimen/_12sdp">
+
+    <ImageView
+        android:id="@+id/imgIcType"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_create_11" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bv_500"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bv_400"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icDelete"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:padding="0dp"
+        android:src="@drawable/ic_view_trash" />
+</com.dong.baselib.widget.layout.UiLinearLayout>
