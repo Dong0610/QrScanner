@@ -23,7 +23,7 @@ fun getLanguageArray(): MutableList<LanguageModel> {
     listLanguage.add(LanguageModel("German", "de", false,R.drawable.ic_lang_ge))
     listLanguage.add(LanguageModel("Hindi", "hi", false,R.drawable.ic_lang_hi))
     listLanguage.add(LanguageModel("Indonesia", "in", false,R.drawable.ic_lang_in))
-    listLanguage.add(LanguageModel("Việt Nam", "vn", false,R.drawable.ic_lang_vn))
+    listLanguage.add(LanguageModel("Việt Nam", "vi", false,R.drawable.ic_lang_vn))
     listLanguage.add(LanguageModel("Japan", "ja", false,R.drawable.ic_lang_jp))
     listLanguage.add(LanguageModel("Portuguese", "pt", false,R.drawable
         .ic_lang_pt))

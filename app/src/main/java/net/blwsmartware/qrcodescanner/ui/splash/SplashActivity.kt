@@ -5,6 +5,8 @@ import net.blwsmartware.qrcodescanner.base.BaseActivity
 import net.blwsmartware.qrcodescanner.databinding.ActivitySplashBinding
 import net.blwsmartware.qrcodescanner.ui.language.LanguageStartActivity
 import kotlinx.coroutines.delay
+import net.blwsmartware.qrcodescanner.app.finishFirstFlow
+import net.blwsmartware.qrcodescanner.ui.main.MainActivity
 
 class SplashActivity:BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::inflate) {
     override fun backPressed() {
@@ -13,7 +15,13 @@ class SplashActivity:BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::
 
     override fun initialize() {
         delay(3000){
-            launchActivity<LanguageStartActivity>()
+            if(!finishFirstFlow){
+                launchActivity<LanguageStartActivity>()
+            }
+            else{
+                launchActivity<MainActivity>()
+            }
+
             finish()
         }
     }

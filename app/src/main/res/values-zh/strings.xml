@@ -211,4 +211,5 @@
     <string name="select_contact">选择联系人</string>
     <string name="number">数字</string>
     <string name="do_you_want_to_delete">您想删除此历史吗？</string>
+    <string name="no_history">没有历史</string>
 </resources>

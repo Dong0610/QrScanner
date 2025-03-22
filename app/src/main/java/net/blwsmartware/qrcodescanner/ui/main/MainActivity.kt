@@ -5,6 +5,7 @@ import androidx.navigation.findNavController
 import com.dong.baselib.widget.GradientOrientation
 import com.dong.baselib.widget.click
 import net.blwsmartware.qrcodescanner.R
+import net.blwsmartware.qrcodescanner.app.finishFirstFlow
 import net.blwsmartware.qrcodescanner.app.permission
 import net.blwsmartware.qrcodescanner.app.viewModel
 import net.blwsmartware.qrcodescanner.base.BaseActivity
@@ -39,6 +40,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             }
             updateBottomNavUI(newScreen)
         }
+        finishFirstFlow= true
     }
 
     override fun ActivityMainBinding.onClick() {

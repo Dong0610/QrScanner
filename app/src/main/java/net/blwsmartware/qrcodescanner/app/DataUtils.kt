@@ -44,6 +44,9 @@ var isVibrate get()= sharedPreference.getBoolean("isVibrate", true)
 var isSound get()= sharedPreference.getBoolean("isSound", true)
     set (value) = sharedPreference.putBoolean("isSound",value)
 
+var finishFirstFlow = sharedPreference.getBoolean("finishFirstFlow",false)
+    set(value) = sharedPreference.putBoolean("finishFirstFlow",value)
+
 
 
 

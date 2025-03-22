@@ -211,4 +211,5 @@
     <string name="select_contact">Seleccionar contacto</string>
     <string name="number">Número</string>
     <string name="do_you_want_to_delete">¿Quieres eliminar esta historia?</string>
+    <string name="no_history">No hay historia</string>
 </resources>

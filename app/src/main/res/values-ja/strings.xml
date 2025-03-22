@@ -211,4 +211,5 @@
     <string name="select_contact">[連絡先]を選択します</string>
     <string name="number">番号</string>
     <string name="do_you_want_to_delete">この履歴を削除しますか？</string>
+    <string name="no_history">歴史はありません</string>
 </resources>

@@ -3,6 +3,8 @@ package net.blwsmartware.qrcodescanner.ui.main
 import androidx.lifecycle.lifecycleScope
 import com.dong.baselib.widget.click
 import com.dong.baselib.widget.fromColor
+import com.dong.baselib.widget.gone
+import com.dong.baselib.widget.visible
 import net.blwsmartware.qrcodescanner.adapter.HistoryAdapter
 import net.blwsmartware.qrcodescanner.app.viewModel
 import net.blwsmartware.qrcodescanner.base.BaseFragment
@@ -24,7 +26,16 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>(FragmentHistoryBind
         listItem.adapter = historyAdapter
         lifecycleScope.launch {
             viewModel.dataImpl.allData.collectLatest {
-                historyAdapter.submitList(it)
+                if(it.isNotEmpty()){
+                    historyAdapter.submitList(it)
+                    binding.llNoData.gone()
+                    binding.listItem.visible()
+                }
+                else{
+                    binding.llNoData.visible()
+                    binding.listItem.gone()
+                }
+
             }
         }
     }

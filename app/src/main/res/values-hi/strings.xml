@@ -184,7 +184,7 @@
     <string name="enter_your_title">अपना शीर्षक दर्ज करें</string>
     <string name="enter_location">स्थान दर्ज करें</string>
     <string name="enter_here">यहां दर्ज करें</string>
-    <string name="can_save_qr_now">अब \ \'\\' qr कोड सहेज सकते हैं</string>
+    <string name="can_save_qr_now">अब \ \'\\\' qr कोड सहेज सकते हैं</string>
     <string name="qr_saved_to_gallery">QR कोड गैलरी के लिए सहेजें</string>
     <string name="qr_already_saved_to_gallery">QR कोड पहले से ही गैलरी में सहेजता है</string>
     <string name="add_favorite_success">इस कोड को पसंदीदा के लिए सहेजा गया है</string>
@@ -211,4 +211,5 @@
     <string name="select_contact">संपर्क का चयन करें</string>
     <string name="number">संख्या</string>
     <string name="do_you_want_to_delete">क्या आप इस इतिहास को हटाना चाहते हैं?</string>
+    <string name="no_history">कोई इतिहास नहीं</string>
 </resources>

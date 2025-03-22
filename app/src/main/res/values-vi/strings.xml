@@ -3,7 +3,7 @@
     <string name="app_name">Qrscanner</string>
     <string name="share_via">Chia sẻ qua</string>
     <string name="check_out_this_amazing_app">Kiểm tra ứng dụng Amzing này</string>
-    <string name="about">Về</string>
+    <string name="about">Về chúng tôi</string>
     <string name="version">Phiên bản</string>
     <string name="this_action_may_contain_advertising">Hành động này có thể chứa quảng cáo</string>
     <string name="settings">Cài đặt</string>
@@ -211,4 +211,5 @@
     <string name="select_contact">Chọn Liên hệ</string>
     <string name="number">Con số</string>
     <string name="do_you_want_to_delete">Bạn có muốn xóa lịch sử này không?</string>
+    <string name="no_history">Không có lịch sử</string>
 </resources>
