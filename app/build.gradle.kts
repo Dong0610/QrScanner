@@ -23,6 +23,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         val formattedDate = SimpleDateFormat("MMM.dd.yyyy").format(Date())
         base.archivesName = "FileRecovery-v$versionName($versionCode)_${formattedDate}"
+        ndk {
+            // Loại bỏ các ABI không cần thiết và chỉ giữ riscv64
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a","riscv64"))
+        }
     }
 
     signingConfigs {
@@ -43,7 +47,6 @@ android {
                 "proguard-rules.pro"
             )
             signingConfig = signingConfigs.getByName("debug")
-            signingConfig = signingConfigs.getByName("release")
         }
 
         debug {
@@ -121,7 +124,8 @@ dependencies {
     implementation("com.google.guava:guava:31.1-jre")
 
     implementation("com.google.mlkit:image-labeling:17.0.8")
-    implementation("com.google.mlkit:text-recognition:16.0.0")
+    implementation("com.google.mlkit:text-recognition:16.0.1")
+//    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
