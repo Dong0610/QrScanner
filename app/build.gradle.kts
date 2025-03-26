@@ -107,6 +107,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":lib"))
+    implementation(project(":ads"))
 
 
 

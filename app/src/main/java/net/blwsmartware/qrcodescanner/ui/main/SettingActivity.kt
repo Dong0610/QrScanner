@@ -7,6 +7,7 @@ import net.blwsmartware.qrcodescanner.app.isVibrate
 import net.blwsmartware.qrcodescanner.app.shareApp
 import net.blwsmartware.qrcodescanner.base.BaseActivity
 import net.blwsmartware.qrcodescanner.databinding.ActivitySettingBinding
+import net.blwsmartware.qrcodescanner.ui.inapp.PremiumActivity
 import net.blwsmartware.qrcodescanner.ui.language.LanguageSettingActivity
 
 class SettingActivity : BaseActivity<ActivitySettingBinding>(ActivitySettingBinding::inflate) {
@@ -26,6 +27,9 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>(ActivitySettingBind
     }
 
     override fun ActivitySettingBinding.setData() {
+        ivPremium.click {
+            launchActivity<PremiumActivity>()
+        }
         llLanguage.click {
             launchActivity<LanguageSettingActivity>()
         }

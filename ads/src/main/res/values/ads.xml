@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="native_test" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="App_open_test" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="interstitial_ad_test" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_rewarded_id_test" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admob_banner_id_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="app_id">ca-app-pub-7886421611178695~8234996124</string>
+    <string name="app_open" translatable="false">ca-app-pub-7886421611178695/7623959326</string>
+    <string name="app_open_splash" translatable="false">ca-app-pub-7886421611178695/5495892969</string>
+    <string name="interstitial_all" translatable="false">ca-app-pub-7886421611178695/8737730446</string>
+
+    <string name="admob_rewarded" translatable="false">ca-app-pub-7886421611178695/4308091920</string>
+    <string name="id_ads_reward" translatable="false">ca-app-pub-7886421611178695/4308091920</string>
+
+    <string name="native_list_picture" translatable="false">ca-app-pub-7886421611178695/6111567107</string>
+    <string name="native_view_detail" translatable="false">ca-app-pub-7886421611178695/8793570762</string>
+    <string name="native_my_album" translatable="false">ca-app-pub-7886421611178695/5345841428</string>
+    <string name="native_favorite_list" translatable="false">ca-app-pub-7886421611178695/8219416775</string>
+    <string name="native_change_language" translatable="false">ca-app-pub-7886421611178695/4032759750</string>
+    <string name="native_upload" translatable="false">ca-app-pub-7886421611178695/5621173596</string>
+    <string name="native_exit" translatable="false">ca-app-pub-7886421611178695/8219416775</string>
+
+    <!--    native new -->
+    <string name="native_home_settings" translatable="false">ca-app-pub-7886421611178695/8219416775</string>
+    <string name="native_inter" translatable="false">ca-app-pub-7886421611178695/3762477610</string>
+    <string name="native_ob_large" translatable="false">ca-app-pub-7886421611178695/1279784504</string>
+    <string name="native_ob_full" translatable="false">ca-app-pub-7886421611178695/5621173596</string>
+    <string name="native_view_detail_full" translatable="false">ca-app-pub-7886421611178695/2449395940</string>
+    <!--end-->
+    <string name="banner_screen_main" translatable="false">ca-app-pub-7886421611178695/3868547145</string>
+    <string name="banner_language" translatable="false">ca-app-pub-7886421611178695/3868547145</string>
+
+    <string name="banner_camera_upload" translatable="false">ca-app-pub-7886421611178695/3326284378</string>
+    <string name="banner_upload_photo" translatable="false">ca-app-pub-7886421611178695/3326284378</string>
+
+    <string name="banner_show_instructional_video" translatable="false">ca-app-pub-7886421611178695/6526500076</string>
+    <string name="banner_view_detail" translatable="false">ca-app-pub-7886421611178695/6526500076</string>
+
+    <string name="banner_preview_photo_video" translatable="false">ca-app-pub-7886421611178695/1873500279</string>
+    <string name="banner_screen_trace" translatable="false">ca-app-pub-7886421611178695/4990057128</string>
+    <string name="banner_screen_sketch" translatable="false">ca-app-pub-7886421611178695/3676975450</string>
+    <string name="banner_view_picture_from_my_album" translatable="false">ca-app-pub-7886421611178695/2419734101</string>
+
+</resources>

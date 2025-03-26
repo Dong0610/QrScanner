@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorindicator">#1CAEC1</color>
+    <color name="whiteBlur">#bf9c9c9c</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="color_black_50">#80000000</color>
+    <color name="color_black_15">#26000000</color>
+
+
+    <color name="button_ads_color">#1CAEC1</color>
+
+    <color name="colorPrimary">#1CAEC1</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#1CAEC1</color>
+    <color name="colorGray">#CCC</color>
+
+    <color name="textColor">#ff666666</color>
+    <color name="colorAds">#1CAEC1</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorGrayAds">#fff8f8f8</color>
+    <color name="stockeCard">#5E58595A</color>
+
+    <color name="lightTransparent">#16000000</color>
+
+    <color name="gntTestBackgroundColor">#00F4F4F4</color>
+    <color name="gntTestBackgroundColor2">#00A3A3A3</color>
+    <color name="gntBlack">#000000</color>
+    <color name="gntWhite">#FFFFFF</color>
+    <color name="gntRed">#FF0000</color>
+    <color name="gntGreen">#00FF00</color>
+    <color name="gntBlue">#4285f4</color>
+    <color name="gntAdGreen">#3A6728</color>
+    <color name="gntGray">#808080</color>
+    <color name="gntOutline">#E0E0E0</color>
+    <color name="text_exit">#000000</color>
+    <color name="color_button">#C44998F6</color>
+    <color name="blue_main">#1E7DEF</color>
+    <color name="color_text_title">#8799D5</color>
+    <color name="color_bg_fail">#334E5B5E</color>
+    <color name="gray_">#9E9E9E</color>
+    <color name="bg_center">#F0F0F3</color>
+
+
+    <color name="color_start_button_app">#6491f8</color>
+    <color name="color_center_button_app">#5575be</color>
+    <color name="color_end_button_app">#5575be</color>
+    <color name="color_press_button_app">#6491f8</color>
+
+    <color name="color_del_red">#FF3B3B</color>
+
+    <color name="color_bg_ads_native">#35394B</color>
+    <color name="color_stroke_ads_native">#51566B</color>
+    <color name="color_bg_shimmer">#5CFFFFFF</color>
+
+</resources>

@@ -8,4 +8,5 @@
     <color name="gradientC">#3965FC</color>
     <color name="gradientE">#a382ea</color>
     <color name="color_bg_def">#101A83FA</color>
+    <color name="clr_un_select_bottom_nav">#828282</color>
 </resources>

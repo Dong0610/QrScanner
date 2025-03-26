@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'io.sad.monster'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-android.txt', 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'androidx.lifecycle:lifecycle-process:2.6.2'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.6.2"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.6.2"
+
+    api "com.android.billingclient:billing:6.2.0"
+    api("androidx.core:core-ktx:1.9.0")
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21"
+    api 'com.airbnb.android:lottie:6.1.0'
+    // Facebook Android SDK (everything)
+    api 'com.facebook.android:facebook-android-sdk:17.0.2'
+//adjust
+    api ("com.adjust.sdk:adjust-android:5.0.1")
+    api ("com.android.installreferrer:installreferrer:2.2")
+
+    api platform('com.google.firebase:firebase-bom:32.2.0')
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-crashlytics'
+    api 'com.google.firebase:firebase-messaging'
+    api 'com.google.firebase:firebase-config'
+    api ("com.facebook.shimmer:shimmer:0.5.0")
+    api("androidx.multidex:multidex:2.0.1")
+}

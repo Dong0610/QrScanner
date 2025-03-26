@@ -6,6 +6,7 @@ import android.content.Context
 import android.widget.Toast
 import com.dong.baselib.permission.Permission
 import com.dong.baselib.system.SharedPreference
+import io.sad.monster.dialog.AppPurchase
 
 
 class AppQrScanner : Application() {
@@ -27,6 +28,7 @@ class AppQrScanner : Application() {
         sharedPreference = SharedPreference(this)
         viewModel = AppViewModel(this@AppQrScanner)
         permission.initialize(this)
+        AppPurchase.getInstance(this@AppQrScanner).initBilling(this)
     }
 }
 

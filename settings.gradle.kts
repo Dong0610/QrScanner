@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "QrScanner"
 include(":app")
 include(":lib")
+include(":ads")

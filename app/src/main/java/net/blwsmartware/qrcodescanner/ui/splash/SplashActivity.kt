@@ -1,6 +1,7 @@
 package net.blwsmartware.qrcodescanner.ui.splash
 
 import com.dong.baselib.widget.delay
+import io.sad.monster.dialog.AppPurchase
 import net.blwsmartware.qrcodescanner.base.BaseActivity
 import net.blwsmartware.qrcodescanner.databinding.ActivitySplashBinding
 import net.blwsmartware.qrcodescanner.ui.language.LanguageStartActivity
@@ -14,16 +15,19 @@ class SplashActivity:BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::
     }
 
     override fun initialize() {
-        delay(3000){
-            if(!finishFirstFlow){
-                launchActivity<LanguageStartActivity>()
-            }
-            else{
-                launchActivity<MainActivity>()
-            }
+        AppPurchase.getInstance(this).restorePurchases {
+            delay(3000){
+                if(!finishFirstFlow){
+                    launchActivity<LanguageStartActivity>()
+                }
+                else{
+                    launchActivity<MainActivity>()
+                }
 
-            finish()
+                finish()
+            }
         }
+
     }
 
     override fun ActivitySplashBinding.onClick() {

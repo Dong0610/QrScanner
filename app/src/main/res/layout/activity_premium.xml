@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dialog"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_round">
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_30sdp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/frClose"
+        app:layout_constraintBottom_toTopOf="@id/tvSubscribe">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                android:fontFamily="@font/bv_800"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/premium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_35ssp"
+                app:layout_constraintTop_toBottomOf="@id/frClose"
+                />
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/llPackage1"
+                app:bgColorLight="@color/color_bg_def"
+                app:stColorDark="@color/transfer"
+                app:stColorLight="@color/transfer"
+                app:strokeWidth="1.8dp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:strokeGdOrientation="tl_br"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage1"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/qr_create_barcode"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost1"
+
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="24.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                app:strokeWidth="0.5dp"
+                android:id="@+id/llPackage2"
+                app:stColorDark="#C8C8C8"
+                app:bgColorDark="@color/white"
+                app:bgColorLight="@color/white"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                app:stColorLight="#C8C8C8"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage2"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/phone_create_qr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost2"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="14.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                app:strokeWidth="0.5dp"
+                android:id="@+id/llPackage3"
+                app:stColorDark="#C8C8C8"
+                app:bgColorDark="@color/white"
+                app:bgColorLight="@color/white"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                app:stColorLight="#C8C8C8"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage3"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/localtion_create_qr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost3"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="50.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                app:strokeWidth="0.5dp"
+                android:id="@+id/llPackage4"
+                app:stColorDark="#C8C8C8"
+                app:bgColorDark="@color/white"
+                app:bgColorLight="@color/white"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                app:stColorLight="#C8C8C8"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage4"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/url_create_qr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost4"
+
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="125.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                app:strokeWidth="0.5dp"
+                android:id="@+id/llPackage5"
+                app:stColorDark="#C8C8C8"
+                app:bgColorDark="@color/white"
+                app:bgColorLight="@color/white"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                app:stColorLight="#C8C8C8"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage5"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/message_create_qr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost5"
+
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="500.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+            <com.dong.baselib.widget.layout.UiLinearLayout
+                android:layout_width="match_parent"
+                app:strokeWidth="0.5dp"
+                android:id="@+id/llPackage6"
+                app:stColorDark="#C8C8C8"
+                app:bgColorDark="@color/white"
+                app:bgColorLight="@color/white"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                app:stColorLight="#C8C8C8"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvPackage6"
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/qr_create_barcode"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvCost6"
+
+                    android:fontFamily="@font/bv_500"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_4ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="24.000 đ"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tvSubscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/bv_700"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/subscribe_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toTopOf="@id/tvHint"
+        android:background="@drawable/bg_item_setting"
+        android:backgroundTint="@color/primary"
+        />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/bv_400"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

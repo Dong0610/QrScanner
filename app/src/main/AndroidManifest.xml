@@ -20,8 +20,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <uses-permission android:name="com.android.vending.BILLING" />
-
     <application
         android:name=".app.AppQrScanner"
         android:allowBackup="true"
@@ -77,6 +75,10 @@
             android:exported="false" />
         <activity
             android:name=".ui.permission.PermissionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.inapp.PremiumActivity"
             android:exported="false" />
         <activity
             android:name=".ui.language.LanguageSettingActivity"

@@ -224,5 +224,17 @@
     <string name="number">Number</string>
     <string name="do_you_want_to_delete">Do you want to delete this history?</string>
     <string name="no_history">No history</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">Upgrade to experience the full features of the app</string>
+    <string name="restore_purchase">Restore purchase</string>
+    <string name="premium">Premium</string>
+    <string name="subscribe_now">Subscribe now</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">You will be billed within 24 hours before the current period ends. You can manage or cancel your subscriptions anytime through your Google Play account settings.</string>
+    <string name="qr_create_barcode">QR Create Barcode</string>
+    <string name="phone_create_qr">Phone Create QR</string>
+    <string name="localtion_create_qr">Location Create QR</string>
+    <string name="url_create_qr">URL Create QR</string>
+    <string name="email_create_qr">Email Create QR</string>
+    <string name="message_create_qr">Message Create QR</string>
+    <string name="error">Error</string>
 
 </resources>
