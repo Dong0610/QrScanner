@@ -157,7 +157,6 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
 
         binding.tvSubscribe.click {
             if (mListDetails.isNotEmpty()) {
-
                 if (mCurPosition >= 0 && mCurPosition < mListDetails.size) {
                     AppPurchase.getInstance(this@PremiumActivity).IAP_BUY_REPEAT = false
                     val details = mListDetails[mCurPosition]
@@ -170,7 +169,13 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
                         Toast.LENGTH_SHORT
                     ).show()
                 }
+                return@click
             }
+            Toast.makeText(
+                this@PremiumActivity,
+                getString(R.string.error),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
