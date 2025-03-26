@@ -25,7 +25,7 @@ android {
         base.archivesName = "FileRecovery-v$versionName($versionCode)_${formattedDate}"
         ndk {
             // Loại bỏ các ABI không cần thiết và chỉ giữ riscv64
-            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a","riscv64"))
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a","riscv64","x86_64"))
         }
     }
 
