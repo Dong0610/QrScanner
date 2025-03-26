@@ -15,6 +15,8 @@ class SplashActivity:BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::
     }
 
     override fun initialize() {
+        AppPurchase.getInstance(this@SplashActivity).initBilling(application)
+
         AppPurchase.getInstance(this).restorePurchases {
             delay(3000){
                 if(!finishFirstFlow){

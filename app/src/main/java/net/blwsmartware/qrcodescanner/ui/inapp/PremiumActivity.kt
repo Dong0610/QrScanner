@@ -88,13 +88,13 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
         val isSelected = mCurPosition == position
 
         val strokeColors = if (isSelected) {
-            intArrayOf(fromColor("#5B6CF9"), fromColor("3965FC"), fromColor("a382ea"))
+            intArrayOf(fromColor("#5B6CF9"), fromColor("5B6CF9"), fromColor("5B6CF9"))
         } else {
             intArrayOf(fromColor("#141A83FA"), fromColor("141A83FA"), fromColor("141A83FA"))
         }
 
         val bgColor = if (isSelected) {
-            fromColor("#141A83FA")
+            fromColor("#ffffff")
         } else {
             fromColor("#ffffff")
         }
@@ -125,6 +125,33 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
         setPurchaseListener()
         binding.frClose.click {
             finish()
+        }
+
+        binding.apply {
+            llPackage1.click {
+                mCurPosition = 0
+                updateAllSelectedItems()
+            }
+            llPackage2.click {
+                mCurPosition = 1
+                updateAllSelectedItems()
+            }
+            llPackage3.click {
+                mCurPosition = 2
+                updateAllSelectedItems()
+            }
+            llPackage4.click {
+                mCurPosition = 3
+                updateAllSelectedItems()
+            }
+            llPackage5.click {
+                mCurPosition = 4
+                updateAllSelectedItems()
+            }
+            llPackage6.click {
+                mCurPosition = 5
+                updateAllSelectedItems()
+            }
         }
 
 

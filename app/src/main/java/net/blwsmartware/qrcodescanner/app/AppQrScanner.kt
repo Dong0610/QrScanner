@@ -28,7 +28,6 @@ class AppQrScanner : Application() {
         sharedPreference = SharedPreference(this)
         viewModel = AppViewModel(this@AppQrScanner)
         permission.initialize(this)
-        AppPurchase.getInstance(this@AppQrScanner).initBilling(this)
     }
 }
 

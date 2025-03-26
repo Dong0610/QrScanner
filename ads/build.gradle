@@ -41,16 +41,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:2.6.2"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.6.2"
 
-    api "com.android.billingclient:billing:6.2.0"
+    api "com.android.billingclient:billing:7.1.1"
     api("androidx.core:core-ktx:1.9.0")
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21"
     api 'com.airbnb.android:lottie:6.1.0'
     // Facebook Android SDK (everything)
     api 'com.facebook.android:facebook-android-sdk:17.0.2'
-//adjust
-    api ("com.adjust.sdk:adjust-android:5.0.1")
-    api ("com.android.installreferrer:installreferrer:2.2")
 
     api platform('com.google.firebase:firebase-bom:32.2.0')
     api 'com.google.firebase:firebase-analytics'

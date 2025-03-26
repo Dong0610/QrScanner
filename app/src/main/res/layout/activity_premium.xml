@@ -65,7 +65,7 @@
                 app:bgColorLight="@color/color_bg_def"
                 app:stColorDark="@color/transfer"
                 app:stColorLight="@color/transfer"
-                app:strokeWidth="1.8dp"
+                app:strokeWidth="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 app:cornerRadius="@dimen/_8sdp"
