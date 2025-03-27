@@ -236,5 +236,6 @@
     <string name="email_create_qr">Email Create QR</string>
     <string name="message_create_qr">Message Create QR</string>
     <string name="error">Error</string>
+    <string name="buy_now">Buy now</string>
 
 </resources>
