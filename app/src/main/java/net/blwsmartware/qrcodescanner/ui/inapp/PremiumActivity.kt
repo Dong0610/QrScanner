@@ -14,8 +14,8 @@ import io.sad.monster.dialog.AppPurchase
 import io.sad.monster.util.SharePreferenceUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import net.blwsmartware.qrcodescanner.R
+import net.blwsmartware.qrcodescanner.adapter.PurchasePackageAdapter
 import net.blwsmartware.qrcodescanner.base.BaseActivity
 import net.blwsmartware.qrcodescanner.databinding.ActivityPremiumBinding
 import net.blwsmartware.qrcodescanner.ui.main.MainActivity
@@ -53,24 +53,10 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
             lifecycleScope.launch(Dispatchers.IO) {
                 mListDetails.clear()
                 mListDetails.addAll(AppPurchase.getInstance(this@PremiumActivity).skuListINAPFromStore)
-                Log.d("VuLT", "initPurchase: skuListSubsFromStore = $mListDetails")
+                Log.e("VuLT", "initPurchase: skuListSubsFromStore = $mListDetails")
 
                 if (mListDetails.isNotEmpty()) {
-                    withContext(Dispatchers.Main) {
-                        binding.tvCost1.text = AppPurchase.getPriceSub(mListDetails[0])
-                        binding.tvCost2.text = AppPurchase.getPriceSub(mListDetails[1])
-                        binding.tvCost3.text = AppPurchase.getPriceSub(mListDetails[2])
-                        binding.tvCost4.text = AppPurchase.getPriceSub(mListDetails[3])
-                        binding.tvCost5.text = AppPurchase.getPriceSub(mListDetails[4])
-                        binding.tvCost6.text = AppPurchase.getPriceSub(mListDetails[5])
-                    }
-                    mCurPosition = mListDetails.size - 1
-                    for (i in mListDetails.indices) {
-                        if (mListDetails[i].productId == AppPurchase.IAP_BARCODE) {
-                            mCurPosition = i
-                            break
-                        }
-                    }
+                    setUpAdapter()
                 }
             }
 
@@ -79,46 +65,28 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
         }
     }
 
+    private fun setUpAdapter() {
+        // Khởi tạo và gán Adapter
+        val adapter = PurchasePackageAdapter(mListDetails) { selectedPackage ->
+            // Xử lý khi người dùng chọn mua gói
+            handlePurchase(selectedPackage)
+        }
+
+        binding.rcvData.adapter = adapter
+    }
+
+    private fun handlePurchase(package1: ProductDetails) {
+        // Xử lý logic mua hàng ở đây
+        Toast.makeText(this, "Đang xử lý mua ${package1.name}", Toast.LENGTH_SHORT).show()
+        AppPurchase.getInstance(this@PremiumActivity)
+            .purchase(this@PremiumActivity, package1)
+    }
 
     override fun backPressed() {
         finish()
     }
 
-    private fun updateSelectedItem(view: UiLinearLayout, position: Int) {
-        val isSelected = mCurPosition == position
-
-        val strokeColors = if (isSelected) {
-            intArrayOf(fromColor("#5B6CF9"), fromColor("5B6CF9"), fromColor("5B6CF9"))
-        } else {
-            intArrayOf(fromColor("#141A83FA"), fromColor("141A83FA"), fromColor("141A83FA"))
-        }
-
-        val bgColor = if (isSelected) {
-            fromColor("#ffffff")
-        } else {
-            fromColor("#ffffff")
-        }
-
-        view.apply {
-            setGradientStroke(strokeColors)
-            setGradientStrokeOrientation(GradientOrientation.TL_BR)
-            setBgColor(bgColor)
-        }
-    }
-
-    private fun updateAllSelectedItems() {
-        binding.apply {
-            updateSelectedItem(llPackage1, 0)
-            updateSelectedItem(llPackage2, 1)
-            updateSelectedItem(llPackage3, 2)
-            updateSelectedItem(llPackage4, 3)
-            updateSelectedItem(llPackage5, 4)
-            updateSelectedItem(llPackage6, 5)
-        }
-    }
-
     override fun initialize() {
-        updateAllSelectedItems()
     }
 
     override fun ActivityPremiumBinding.onClick() {
@@ -126,34 +94,6 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
         binding.frClose.click {
             finish()
         }
-
-        binding.apply {
-            llPackage1.click {
-                mCurPosition = 0
-                updateAllSelectedItems()
-            }
-            llPackage2.click {
-                mCurPosition = 1
-                updateAllSelectedItems()
-            }
-            llPackage3.click {
-                mCurPosition = 2
-                updateAllSelectedItems()
-            }
-            llPackage4.click {
-                mCurPosition = 3
-                updateAllSelectedItems()
-            }
-            llPackage5.click {
-                mCurPosition = 4
-                updateAllSelectedItems()
-            }
-            llPackage6.click {
-                mCurPosition = 5
-                updateAllSelectedItems()
-            }
-        }
-
 
         binding.tvSubscribe.click {
             if (mListDetails.isNotEmpty()) {
