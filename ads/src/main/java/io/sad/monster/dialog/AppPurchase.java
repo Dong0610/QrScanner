@@ -143,10 +143,8 @@ public class AppPurchase {
                     finalBillingClient.queryPurchasesAsync(
                             QueryPurchasesParams.newBuilder().setProductType(BillingClient.ProductType.INAPP).build(), (billingResult1, list) -> {
                                 if (!list.isEmpty()) {
-                                    Log.e("VuLT", "Product id will restore here: " + list);
                                     verifyPurchased(runnable);
                                 } else {
-                                    Log.e("VuLT", "No purchases found");
                                     runnable.run(); // Gọi callback nếu không có gói nào đã mua
                                 }
                             });
@@ -279,21 +277,17 @@ public class AppPurchase {
     public void verifyPurchased(Runnable runnable) {
         verified = false;
         if (listINAPId != null && !listINAPId.isEmpty()) {
-            Log.d("VuLT", "verifyPurchased 1");
 
             billingClient.queryPurchasesAsync(QueryPurchasesParams.newBuilder()
                     .setProductType(BillingClient.ProductType.INAPP)
                     .build(), (billingResult, list) -> {
                 if (mContext != null) {
-                    Log.d("VuLT", "verifyPurchased 2");
 
                     list.forEach(this::acknowledgePurchase);
                     ((Activity) mContext).runOnUiThread(() -> {
                         try {
-                            Log.d("VuLT", "verifyPurchased 3");
 
                             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                                Log.d("VuLT", "verifyPurchased 4");
 
                                 if (!verifiedSUBS || !verified) {
                                     SharePreferenceUtils.putIsPurchase(mContext, false);
@@ -343,12 +337,10 @@ public class AppPurchase {
                 purchaseListener.displayErrorMessage("Billing error init");
             return "";
         }
-        Log.i("VuLT", "purchaseInApp:1 ");
 
         if (productDetails == null) {
             return "Product ID invalid";
         }
-        Log.i("VuLT", "purchaseInApp: 2");
 
         String offerToken;
         try {
@@ -376,7 +368,6 @@ public class AppPurchase {
                 .build();
         BillingResult responseCode = billingClient.launchBillingFlow(activity, billingFlowParams);
         if (responseCode.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-            Log.i("VuLT", "purchaseInApp: ");
             if (latestPurchase != null) {
                 consumePurchaseIAP(latestPurchase); // Tiêu thụ sản phẩm để có thể mua lại
             }
