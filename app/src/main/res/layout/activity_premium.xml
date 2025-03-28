@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dialog"
+    android:background="@color/black"
     android:orientation="vertical"
     >
 
@@ -46,30 +46,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/tvHeader"
-        app:layout_constraintBottom_toTopOf="@id/tvSubscribe"
+        app:layout_constraintBottom_toTopOf="@id/tvHint"
         tools:listitem="@layout/item_purchase_package"
         />
 
-    <TextView
-        android:id="@+id/tvSubscribe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        android:fontFamily="@font/bv_700"
-        android:gravity="center"
-        android:visibility="gone"
-        android:paddingVertical="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:text="@string/subscribe_now"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_18ssp"
-        app:layout_constraintBottom_toTopOf="@id/tvHint"
-        android:background="@drawable/bg_item_setting"
-        android:backgroundTint="@color/primary"
-        />
 
     <TextView
         android:id="@+id/tvHint"

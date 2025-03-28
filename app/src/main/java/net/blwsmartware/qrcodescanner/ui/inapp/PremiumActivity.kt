@@ -5,10 +5,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.android.billingclient.api.ProductDetails
-import com.dong.baselib.builder.fromColor
-import com.dong.baselib.widget.GradientOrientation
 import com.dong.baselib.widget.click
-import com.dong.baselib.widget.layout.UiLinearLayout
 import io.sad.monster.callback.PurchaseListener
 import io.sad.monster.dialog.AppPurchase
 import io.sad.monster.util.SharePreferenceUtils
@@ -16,20 +13,26 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import net.blwsmartware.qrcodescanner.R
 import net.blwsmartware.qrcodescanner.adapter.PurchasePackageAdapter
+import net.blwsmartware.qrcodescanner.app.isCreateBarcode
+import net.blwsmartware.qrcodescanner.app.isEmailCreateQr
+import net.blwsmartware.qrcodescanner.app.isLocationCreateQr
+import net.blwsmartware.qrcodescanner.app.isMessageCreateQr
+import net.blwsmartware.qrcodescanner.app.isPhoneCreateQr
+import net.blwsmartware.qrcodescanner.app.isUrlCreateQr
 import net.blwsmartware.qrcodescanner.base.BaseActivity
 import net.blwsmartware.qrcodescanner.databinding.ActivityPremiumBinding
 import net.blwsmartware.qrcodescanner.ui.main.MainActivity
 
 class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBinding::inflate) {
 
-    private var mCurPosition = 0
     private var mListDetails = arrayListOf<ProductDetails>()
 
     private fun setPurchaseListener() {
         AppPurchase.getInstance(this).setPurchaseListener(object : PurchaseListener {
-            override fun onProductPurchased(productId: String?, transactionDetails: String) {
+            override fun onProductPurchased(productId: String, transactionDetails: String) {
                 SharePreferenceUtils.putIsPurchase(this@PremiumActivity, true)
                 AppPurchase.getInstance(this@PremiumActivity).setIsPurchased(true)
+                setValuePurchase(productId)
                 val intent = Intent(
                     this@PremiumActivity,
                     MainActivity::class.java
@@ -46,6 +49,34 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
             override fun onUserPurchaseConsumable() {
             }
         })
+    }
+
+    private fun setValuePurchase(productId: String) {
+        when (productId) {
+            "email_create_qr" -> {
+                isEmailCreateQr = true
+            }
+
+            "localtion_create_qr" -> {
+                isLocationCreateQr = true
+            }
+
+            "message_create_qr" -> {
+                isMessageCreateQr = true
+            }
+
+            "phone_create_qr" -> {
+                isPhoneCreateQr = true
+            }
+
+            "qr_create_barcode" -> {
+                isCreateBarcode = true
+            }
+
+            "url_create_qr" -> {
+                isUrlCreateQr = true
+            }
+        }
     }
 
     private fun initPurchase() {
@@ -65,9 +96,10 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
         }
     }
 
+    private var adapter: PurchasePackageAdapter? = null
     private fun setUpAdapter() {
         // Khởi tạo và gán Adapter
-        val adapter = PurchasePackageAdapter(mListDetails) { selectedPackage ->
+        adapter = PurchasePackageAdapter(mListDetails) { selectedPackage ->
             // Xử lý khi người dùng chọn mua gói
             handlePurchase(selectedPackage)
         }
@@ -77,7 +109,7 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
 
     private fun handlePurchase(package1: ProductDetails) {
         // Xử lý logic mua hàng ở đây
-        Toast.makeText(this, "Đang xử lý mua ${package1.name}", Toast.LENGTH_SHORT).show()
+        Log.d("VuLT", "handlePurchase: $package1")
         AppPurchase.getInstance(this@PremiumActivity)
             .purchase(this@PremiumActivity, package1)
     }
@@ -87,35 +119,12 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
     }
 
     override fun initialize() {
+        setPurchaseListener()
     }
 
     override fun ActivityPremiumBinding.onClick() {
-        setPurchaseListener()
         binding.frClose.click {
             finish()
-        }
-
-        binding.tvSubscribe.click {
-            if (mListDetails.isNotEmpty()) {
-                if (mCurPosition >= 0 && mCurPosition < mListDetails.size) {
-                    AppPurchase.getInstance(this@PremiumActivity).IAP_BUY_REPEAT = false
-                    val details = mListDetails[mCurPosition]
-                    AppPurchase.getInstance(this@PremiumActivity)
-                        .purchase(this@PremiumActivity, details)
-                } else {
-                    Toast.makeText(
-                        this@PremiumActivity,
-                        getString(R.string.error),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                return@click
-            }
-            Toast.makeText(
-                this@PremiumActivity,
-                getString(R.string.error),
-                Toast.LENGTH_SHORT
-            ).show()
         }
     }
 

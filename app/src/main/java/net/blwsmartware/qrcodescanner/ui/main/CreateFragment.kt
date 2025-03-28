@@ -1,11 +1,13 @@
 package net.blwsmartware.qrcodescanner.ui.main
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.core.view.isVisible
 import com.dong.baselib.widget.click
+import net.blwsmartware.qrcodescanner.app.isCreateBarcode
+import net.blwsmartware.qrcodescanner.app.isEmailCreateQr
+import net.blwsmartware.qrcodescanner.app.isLocationCreateQr
+import net.blwsmartware.qrcodescanner.app.isMessageCreateQr
+import net.blwsmartware.qrcodescanner.app.isPhoneCreateQr
+import net.blwsmartware.qrcodescanner.app.isUrlCreateQr
 import net.blwsmartware.qrcodescanner.base.BaseFragment
 import net.blwsmartware.qrcodescanner.databinding.FragmentCreateBinding
 import net.blwsmartware.qrcodescanner.ui.create.CreateBarCodeActivity
@@ -17,50 +19,47 @@ import net.blwsmartware.qrcodescanner.ui.create.CreatePhoneActivity
 import net.blwsmartware.qrcodescanner.ui.create.CreateTextActivity
 import net.blwsmartware.qrcodescanner.ui.create.CreateUrlActivity
 import net.blwsmartware.qrcodescanner.ui.create.CreateWifiActivity
+import net.blwsmartware.qrcodescanner.ui.inapp.PremiumActivity
 
-class CreateFragment : BaseFragment<FragmentCreateBinding>(FragmentCreateBinding::inflate,false){
-    override fun FragmentCreateBinding.initView() {
+class CreateFragment : BaseFragment<FragmentCreateBinding>(FragmentCreateBinding::inflate, false) {
 
-    }
     override fun backPress() {
         super.backPress()
         fragmentAttach?.fragmentOnBack()
     }
 
-    override fun FragmentCreateBinding.onClick() {
-        lnCreateText.click {
-            launchActivity<CreateTextActivity>()
+    private fun checkShowIconPremium() {
+        binding.apply {
+            ivPremiumEmail.isVisible = !isEmailCreateQr
+            ivPremiumLocation.isVisible = !isLocationCreateQr
+            ivPremiumMessage.isVisible = !isMessageCreateQr
+            ivPremiumPhone.isVisible = !isPhoneCreateQr
+            ivPremiumBarcode.isVisible = !isCreateBarcode
+            ivPremiumUrl.isVisible = !isUrlCreateQr
         }
-        lnCreateUrl.click {
-            launchActivity<CreateUrlActivity>()
-        }
-        lnCreateMessage.click {
-            launchActivity<CreateMessageActivity>()
-        }
-        lnCreateEmail.click {
-            launchActivity<CreateEmailActivity>()
-        }
-        lnCreateWifi.click {
-            launchActivity<CreateWifiActivity>()
-        }
-        lnCreateLocation.click {
-            launchActivity<CreateLocationActivity>()
-        }
-        lnCreateContact.click {
-            launchActivity<CreateContactActivity>()
-        }
-        lnCreateBarcode.click {
-            launchActivity<CreateBarCodeActivity>()
-        }
-
-        lnCreatePhone.click {
-            launchActivity<CreatePhoneActivity>()
-        }
-
-        icSettings.click {
-            launchActivity<SettingActivity>()
-        }
-
     }
 
+
+    override fun FragmentCreateBinding.initView() {
+        checkShowIconPremium()
+    }
+
+    private fun openPremium() = launchActivity<PremiumActivity>()
+
+    private inline fun launchOrOpenPremium(condition: Boolean, crossinline action: () -> Unit) {
+        if (condition) action() else openPremium()
+    }
+
+    override fun FragmentCreateBinding.onClick() {
+        lnCreateText.click { launchActivity<CreateTextActivity>() }
+        lnCreateUrl.click { launchOrOpenPremium(isUrlCreateQr) { launchActivity<CreateUrlActivity>() } }
+        lnCreateMessage.click { launchOrOpenPremium(isMessageCreateQr) { launchActivity<CreateMessageActivity>() } }
+        lnCreateEmail.click { launchOrOpenPremium(isEmailCreateQr) { launchActivity<CreateEmailActivity>() } }
+        lnCreateWifi.click { launchActivity<CreateWifiActivity>() }
+        lnCreateLocation.click { launchOrOpenPremium(isLocationCreateQr) { launchActivity<CreateLocationActivity>() } }
+        lnCreateContact.click { launchActivity<CreateContactActivity>() }
+        lnCreateBarcode.click { launchOrOpenPremium(isCreateBarcode) { launchActivity<CreateBarCodeActivity>() } }
+        lnCreatePhone.click { launchOrOpenPremium(isPhoneCreateQr) { launchActivity<CreatePhoneActivity>() } }
+        icSettings.click { launchActivity<SettingActivity>() }
+    }
 }

@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:padding="@dimen/_13sdp">
 
         <TextView
@@ -39,6 +41,15 @@
             android:layout_marginTop="8dp"
             android:text="@string/buy_now"
             android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/iv_done"
+            android:visibility="gone"
+            />
 
     </LinearLayout>
 

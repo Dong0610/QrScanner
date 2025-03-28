@@ -47,6 +47,25 @@ var isSound get()= sharedPreference.getBoolean("isSound", true)
 var finishFirstFlow = sharedPreference.getBoolean("finishFirstFlow",false)
     set(value) = sharedPreference.putBoolean("finishFirstFlow",value)
 
+var isEmailCreateQr = sharedPreference.getBoolean("email_create_qr",false)
+    set(value) = sharedPreference.putBoolean("email_create_qr",value)
+
+var isLocationCreateQr = sharedPreference.getBoolean("localtion_create_qr",false)
+    set(value) = sharedPreference.putBoolean("localtion_create_qr",value)
+
+
+var isMessageCreateQr = sharedPreference.getBoolean("message_create_qr",false)
+    set(value) = sharedPreference.putBoolean("message_create_qr",value)
+
+var isPhoneCreateQr = sharedPreference.getBoolean("phone_create_qr",false)
+    set(value) = sharedPreference.putBoolean("phone_create_qr",value)
+
+var isCreateBarcode = sharedPreference.getBoolean("qr_create_barcode",false)
+    set(value) = sharedPreference.putBoolean("qr_create_barcode",value)
+
+var isUrlCreateQr = sharedPreference.getBoolean("url_create_qr",false)
+    set(value) = sharedPreference.putBoolean("url_create_qr",value)
+
 
 
 

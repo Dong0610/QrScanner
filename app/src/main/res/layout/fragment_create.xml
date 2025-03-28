@@ -102,39 +102,61 @@
                             android:textSize="@dimen/_12sdp" />
 
                     </com.dong.baselib.widget.layout.UiLinearLayout>
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreateUrl"
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
+                        android:layout_weight="1">
 
-                        <ImageView
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/icon_create_10" />
-
-                        <TextView
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreateUrl"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/url"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/_12sdp" />
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:strokeWidth=".5dp">
 
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/icon_create_10" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/url"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivPremiumUrl"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </LinearLayout>
 
@@ -145,73 +167,117 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreateMessage"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
 
-                        <ImageView
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/icon_create_4" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/message"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/_12sdp" />
-
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
-
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreateEmail"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
+                        android:layout_weight="1">
 
-                        <ImageView
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/icon_create_3" />
-
-                        <TextView
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreateMessage"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/email"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/_12sdp" />
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:strokeWidth=".5dp">
 
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/icon_create_4" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/message"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivPremiumMessage"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_12sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1">
+
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreateEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:strokeWidth=".5dp">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/icon_create_3" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/email"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivPremiumEmail"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </LinearLayout>
                 <LinearLayout
@@ -255,39 +321,60 @@
 
                     </com.dong.baselib.widget.layout.UiLinearLayout>
 
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreateLocation"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
+                        android:layout_weight="1">
 
-                        <ImageView
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/icon_create_5" />
-
-                        <TextView
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreateLocation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/location"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/_12sdp" />
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:strokeWidth=".5dp">
 
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/icon_create_5" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/location"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivPremiumLocation"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
                 <LinearLayout
@@ -331,39 +418,61 @@
 
                     </com.dong.baselib.widget.layout.UiLinearLayout>
 
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreatePhone"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_6sdp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
+                        android:layout_weight="1">
 
-                        <ImageView
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/icon_create_6" />
-
-                        <TextView
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreatePhone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_12sdp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/phone"
-                            android:textAlignment="center"
-                            android:textSize="@dimen/_12sdp" />
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:strokeWidth=".5dp">
 
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/icon_create_6" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/phone"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivPremiumPhone"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </LinearLayout>
                 <TextView
@@ -384,40 +493,62 @@
                     android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <com.dong.baselib.widget.layout.UiLinearLayout
-                        android:id="@+id/lnCreateBarcode"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingVertical="@dimen/_12sdp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_12sdp"
-                        app:bgColorDark="@color/white"
-                        app:bgColorLight="@color/white"
-                        app:cornerRadius="@dimen/_12sdp"
-                        app:stColorDark="@color/color_e0e0e0"
-                        app:stColorLight="@color/color_e0e0e0"
-                        app:strokeWidth=".5dp">
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_weight="1">
 
-                        <ImageView
-                            android:layout_marginVertical="@dimen/_12sdp"
-                            android:layout_width="@dimen/_34sdp"
-                            android:layout_height="@dimen/_34sdp"
-                            android:src="@drawable/ic_create_11" />
-
-                        <TextView
-                            android:layout_marginHorizontal="@dimen/_8sdp"
+                        <com.dong.baselib.widget.layout.UiLinearLayout
+                            android:id="@+id/lnCreateBarcode"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bv_500"
-                            android:includeFontPadding="false"
-                            android:text="@string/barcode"
-                            android:textAlignment="textStart"
-                            android:textSize="@dimen/_12sdp" />
+                            android:paddingVertical="@dimen/_12sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/_12sdp"
+                            app:bgColorDark="@color/white"
+                            app:bgColorLight="@color/white"
+                            app:cornerRadius="@dimen/_12sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:stColorDark="@color/color_e0e0e0"
+                            app:stColorLight="@color/color_e0e0e0"
+                            app:strokeWidth=".5dp">
 
-                    </com.dong.baselib.widget.layout.UiLinearLayout>
+                            <ImageView
+                                android:layout_marginVertical="@dimen/_12sdp"
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:src="@drawable/ic_create_11" />
+
+                            <TextView
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bv_500"
+                                android:includeFontPadding="false"
+                                android:text="@string/barcode"
+                                android:textAlignment="textStart"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.dong.baselib.widget.layout.UiLinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivPremiumBarcode"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_premium_setting"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:tint="@color/primary"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </LinearLayout>
 
