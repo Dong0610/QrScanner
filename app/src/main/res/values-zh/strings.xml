@@ -212,4 +212,18 @@
     <string name="number">数字</string>
     <string name="do_you_want_to_delete">您想删除此历史吗？</string>
     <string name="no_history">没有历史</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">升级以体验应用的全部功能</string>
+    <string name="restore_purchase">恢复购买</string>
+    <string name="premium">高级版</string>
+    <string name="subscribe_now">立即订阅</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">将在当前周期结束前24小时内收费。您可以随时通过 Google Play 帐号设置管理或取消订阅。</string>
+    <string name="qr_create_barcode">创建二维码</string>
+    <string name="phone_create_qr">创建电话二维码</string>
+    <string name="localtion_create_qr">创建位置二维码</string>
+    <string name="url_create_qr">创建网址二维码</string>
+    <string name="email_create_qr">创建邮箱二维码</string>
+    <string name="message_create_qr">创建消息二维码</string>
+    <string name="error">错误</string>
+    <string name="buy_now">立即购买</string>
+
 </resources>

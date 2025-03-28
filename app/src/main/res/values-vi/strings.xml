@@ -212,4 +212,18 @@
     <string name="number">Con số</string>
     <string name="do_you_want_to_delete">Bạn có muốn xóa lịch sử này không?</string>
     <string name="no_history">Không có lịch sử</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">Nâng cấp để trải nghiệm đầy đủ tính năng của ứng dụng</string>
+    <string name="restore_purchase">Khôi phục giao dịch mua</string>
+    <string name="premium">Cao cấp</string>
+    <string name="subscribe_now">Đăng ký ngay</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">Bạn sẽ bị tính phí trong vòng 24 giờ trước khi kỳ hạn hiện tại kết thúc. Bạn có thể quản lý hoặc hủy đăng ký bất cứ lúc nào trong cài đặt tài khoản Google Play của mình.</string>
+    <string name="qr_create_barcode">Tạo mã vạch QR</string>
+    <string name="phone_create_qr">Tạo mã QR điện thoại</string>
+    <string name="localtion_create_qr">Tạo mã QR vị trí</string>
+    <string name="url_create_qr">Tạo mã QR URL</string>
+    <string name="email_create_qr">Tạo mã QR email</string>
+    <string name="message_create_qr">Tạo mã QR tin nhắn</string>
+    <string name="error">Lỗi</string>
+    <string name="buy_now">Mua ngay</string>
+
 </resources>

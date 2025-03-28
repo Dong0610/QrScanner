@@ -212,4 +212,18 @@
     <string name="number">番号</string>
     <string name="do_you_want_to_delete">この履歴を削除しますか？</string>
     <string name="no_history">歴史はありません</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">アプリの全機能を体験するにはアップグレードしてください</string>
+    <string name="restore_purchase">購入を復元</string>
+    <string name="premium">プレミアム</string>
+    <string name="subscribe_now">今すぐ購読</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">現在の期間が終了する24時間前に請求されます。Google Playアカウント設定からいつでも購読を管理またはキャンセルできます。</string>
+    <string name="qr_create_barcode">QRバーコード作成</string>
+    <string name="phone_create_qr">電話QR作成</string>
+    <string name="localtion_create_qr">位置情報QR作成</string>
+    <string name="url_create_qr">URL QR作成</string>
+    <string name="email_create_qr">メールQR作成</string>
+    <string name="message_create_qr">メッセージQR作成</string>
+    <string name="error">エラー</string>
+    <string name="buy_now">今すぐ購入</string>
+
 </resources>

@@ -212,4 +212,18 @@
     <string name="number">संख्या</string>
     <string name="do_you_want_to_delete">क्या आप इस इतिहास को हटाना चाहते हैं?</string>
     <string name="no_history">कोई इतिहास नहीं</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">ऐप की सभी सुविधाओं का अनुभव लेने के लिए अपग्रेड करें</string>
+    <string name="restore_purchase">खरीदारी पुनर्स्थापित करें</string>
+    <string name="premium">प्रीमियम</string>
+    <string name="subscribe_now">अभी सदस्यता लें</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">वर्तमान अवधि समाप्त होने से 24 घंटे पहले शुल्क लिया जाएगा। आप अपने Google Play खाता सेटिंग्स से कभी भी अपनी सदस्यता प्रबंधित या रद्द कर सकते हैं।</string>
+    <string name="qr_create_barcode">QR बारकोड बनाएँ</string>
+    <string name="phone_create_qr">फोन QR बनाएँ</string>
+    <string name="localtion_create_qr">स्थान QR बनाएँ</string>
+    <string name="url_create_qr">URL QR बनाएँ</string>
+    <string name="email_create_qr">ईमेल QR बनाएँ</string>
+    <string name="message_create_qr">संदेश QR बनाएँ</string>
+    <string name="error">त्रुटि</string>
+    <string name="buy_now">अब खरीदें</string>
+
 </resources>

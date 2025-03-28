@@ -35,7 +35,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_16sdp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/viewEnd"
+            app:layout_constraintEnd_toStartOf="@+id/ivPremium"
             app:layout_constraintStart_toEndOf="@+id/ivBackPress"
             app:layout_constraintTop_toTopOf="parent" />
 

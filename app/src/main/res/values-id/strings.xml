@@ -212,4 +212,18 @@
     <string name="number">Nomor</string>
     <string name="do_you_want_to_delete">Apakah Anda ingin menghapus sejarah ini?</string>
     <string name="no_history">Tidak ada sejarah</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">Tingkatkan untuk menikmati semua fitur aplikasi</string>
+    <string name="restore_purchase">Pulihkan pembelian</string>
+    <string name="premium">Premium</string>
+    <string name="subscribe_now">Berlangganan sekarang</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">Anda akan ditagih dalam waktu 24 jam sebelum periode saat ini berakhir. Anda dapat mengelola atau membatalkan langganan kapan saja melalui pengaturan akun Google Play Anda.</string>
+    <string name="qr_create_barcode">Buat Barcode QR</string>
+    <string name="phone_create_qr">Buat QR Telepon</string>
+    <string name="localtion_create_qr">Buat QR Lokasi</string>
+    <string name="url_create_qr">Buat QR URL</string>
+    <string name="email_create_qr">Buat QR Email</string>
+    <string name="message_create_qr">Buat QR Pesan</string>
+    <string name="error">Kesalahan</string>
+    <string name="buy_now">Beli sekarang</string>
+
 </resources>

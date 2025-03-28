@@ -212,4 +212,18 @@
     <string name="number">Número</string>
     <string name="do_you_want_to_delete">¿Quieres eliminar esta historia?</string>
     <string name="no_history">No hay historia</string>
+    <string name="upgrade_to_experience_the_full_features_of_the_app">Actualiza para disfrutar de todas las funciones de la app</string>
+    <string name="restore_purchase">Restaurar compra</string>
+    <string name="premium">Premium</string>
+    <string name="subscribe_now">Suscribirse ahora</string>
+    <string name="you_will_be_billed_within_24_hours_before_the_current_period_ends_you_can_manage_or_cancel_your_subscriptions_anytime_through_your_google_play_account_settings">Se te cobrará dentro de las 24 horas antes de que finalice el período actual. Puedes gestionar o cancelar tus suscripciones en cualquier momento desde la configuración de tu cuenta de Google Play.</string>
+    <string name="qr_create_barcode">Crear código QR</string>
+    <string name="phone_create_qr">Crear QR de teléfono</string>
+    <string name="localtion_create_qr">Crear QR de ubicación</string>
+    <string name="url_create_qr">Crear QR de URL</string>
+    <string name="email_create_qr">Crear QR de correo</string>
+    <string name="message_create_qr">Crear QR de mensaje</string>
+    <string name="error">Error</string>
+    <string name="buy_now">Comprar ahora</string>
+
 </resources>
