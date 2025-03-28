@@ -38,10 +38,8 @@ class PremiumActivity : BaseActivity<ActivityPremiumBinding>(ActivityPremiumBind
                     MainActivity::class.java
                 )
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                AppPurchase.getInstance(this@PremiumActivity).restorePurchases {
-                    startActivity(intent)
-                    finish()
-                }
+                startActivity(intent)
+                finish()
             }
 
             override fun displayErrorMessage(errorMsg: String) {}

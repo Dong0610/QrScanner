@@ -47,6 +47,7 @@ public class AppPurchase {
     private static AppPurchase instance;
     final private Map<String, ProductDetails> skuDetailsINAPMap = new HashMap<>();
     private ArrayList<String> listINAPId;
+    public ArrayList<String> listIdReStore;
     private PurchaseListener purchaseListener;
     private Boolean isInitBillingFinish = false;
     private BillingClient billingClient;
@@ -308,6 +309,7 @@ public class AppPurchase {
                                         for (String id : listINAPId) {
                                             if (purchase.getProducts().contains(id)) {
                                                 isPurchase = true;
+                                                listIdReStore.add(id);
                                                 SharePreferenceUtils.putIsPurchase(mContext, true);
                                                 runnable.run();
                                                 if (!verified) {
